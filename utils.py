@@ -21,6 +21,7 @@ from shortzy import Shortzy
 import http.client
 import json
 from logging_helper import LOGGER
+from info import OMDB_API_KEY
 
 BTN_URL_REGEX = re.compile(
     r"(\[([^\[]+?)\]\((buttonurl|buttonalert):(?:/{0,2})(.+?)(:same)?\))"
@@ -28,7 +29,7 @@ BTN_URL_REGEX = re.compile(
 
 BAD_WORDS_REGEX = re.compile('|'.join(map(re.escape, sorted(BAD_WORDS, key=len, reverse=True))), flags=re.IGNORECASE) if BAD_WORDS else None
 
-imdb = IMDBKit() 
+imdb = IMDBKit(apikey=OMDB_API_KEY)
 BANNED = {}
 SMART_OPEN = '“'
 SMART_CLOSE = '”'
