@@ -20,7 +20,7 @@ API_HASH = environ.get('API_HASH', '')
 BOT_TOKEN = environ.get('BOT_TOKEN', "")
 
 # OMDB API Key - IMDb Posters ke liye (Free: omdbapi.com/apikey.aspx)
-OMDB_API_KEY = environ.get('OMDB_API_KEY', '')  # <-- Apni API key yaha environment variable se lega
+OMDB_API_KEY = environ.get('OMDB_API_KEY', 'fe63a17a')  # <-- Apni API key yaha environment variable se lega
 
 # IMDB Feature (Already True hai aapki file mein)
 # IMDB = is_enabled((environ.get('IMDB', "True")), True)  # Ye line already hai, remove mat karna
